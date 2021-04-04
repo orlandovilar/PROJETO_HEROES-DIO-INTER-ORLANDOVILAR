@@ -31,7 +31,7 @@ public class HeroesService {
         return Mono.just(true);
     }
 
-    public long consultQuantifyHeroes() {
+    public long consultAmountHeroes() {
         return heroesRepository.count();
     }
 }

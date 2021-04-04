@@ -34,11 +34,11 @@ public class HeroesController {
         return heroesService.findAll();
     }
 
-    @GetMapping(HEROES_ENDPOINT_LOCAL+"/quantifyHeroes")
-    public long consultQuantifyHeroes() {
-        log.info("requesting the quantify of heroes");
+    @GetMapping(HEROES_ENDPOINT_LOCAL+"/amountHeroes")
+    public long consultAmountHeroes() {
+        log.info("requesting total amount of heroes");
 
-        return heroesService.consultQuantifyHeroes();
+        return heroesService.consultAmountHeroes();
     }
 
     @GetMapping(HEROES_ENDPOINT_LOCAL+"/{id}")
