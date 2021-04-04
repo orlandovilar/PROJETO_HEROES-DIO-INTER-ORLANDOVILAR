@@ -55,7 +55,7 @@ public class HeroesapiApplicationTests {
 		webTestClient.delete().uri(HEROES_ENDPOINT_LOCAL.concat("/{id}"),"5")
 				.accept(MediaType.APPLICATION_JSON)
 				.exchange()
-				.expectStatus().isNotFound()
+				.expectStatus().isEqualTo(HttpStatus.CONTINUE)
 				.expectBody(Void.class);
 
 	}
